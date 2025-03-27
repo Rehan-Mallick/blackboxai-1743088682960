@@ -1,0 +1,23 @@
+#game-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #4a5568;
+    border-radius: 8px;
+}
+
+#game-canvas {
+    width: 100%;
+    height: 100%;
+    background-color: #1a202c;
+}
+
+#level-complete {
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
