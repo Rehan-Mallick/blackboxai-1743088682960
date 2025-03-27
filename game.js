@@ -24,7 +24,7 @@ const runner = Runner.create();
 Runner.run(runner, engine);
 
 // Game state
-let currentLevel = 1;
+let currentLevel = localStorage.getItem('metalBallMazeLevel') || 1;
 let tiltX = 0;
 let tiltY = 0;
 const maxTilt = 0.001;
@@ -58,6 +58,7 @@ document.getElementById('reset').addEventListener('click', () => {
 document.getElementById('next-level').addEventListener('click', () => {
     currentLevel++;
     if (currentLevel > 100) currentLevel = 1;
+    localStorage.setItem('metalBallMazeLevel', currentLevel);
     document.getElementById('level').textContent = currentLevel;
     levelCompleteElement.classList.add('hidden');
     loadLevel(currentLevel);
