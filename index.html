@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Ball Maze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
+        <h1 class="text-4xl font-bold text-center mb-4">Metal Ball Maze</h1>
+        <div class="flex justify-between items-center mb-4">
+            <div class="text-xl">Level: <span id="level">1</span>/100</div>
+            <button id="reset" class="bg-red-500 hover:bg-red-700 px-4 py-2 rounded">Reset Level</button>
+        </div>
+        <div id="game-container" class="relative">
+            <canvas id="game-canvas"></canvas>
+            <div id="level-complete" class="hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+                <div class="bg-gray-800 p-8 rounded-lg text-center">
+                    <h2 class="text-3xl font-bold mb-4">Level Complete!</h2>
+                    <button id="next-level" class="bg-green-500 hover:bg-green-700 px-6 py-3 rounded text-xl">Next Level</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 text-center">
+            <p>Use <span class="font-bold">Arrow Keys</span> or <span class="font-bold">A/D</span> to tilt the maze</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
